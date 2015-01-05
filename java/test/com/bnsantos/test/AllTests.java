@@ -9,5 +9,7 @@ import org.junit.runners.Suite;
 	Question1_3.class,
 	Question1_4.class,
 	Question1_5.class,
-	Question1_6.class})
+	Question1_6.class,
+	Question1_7.class,
+	Question1_8.class})
 public class AllTests{}
