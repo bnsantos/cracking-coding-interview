@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.bnsantos.chapter1.Question1;
 
-public class Chapter1 {
+public class Chapter1_1 {
 	char[] ascii;
 	char[] repeated;
 	
