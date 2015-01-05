@@ -6,7 +6,7 @@ import org.junit.Test;
 import com.bnsantos.chapter1.Question3;
 
 
-public class Chapter1_3 {
+public class Question1_3 {
 
 	@Test
 	public void testOk() {

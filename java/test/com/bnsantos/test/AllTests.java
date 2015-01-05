@@ -5,6 +5,6 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	Chapter1_1.class,
-	Chapter1_3.class})
+	Question1_1.class,
+	Question1_3.class})
 public class AllTests{}
