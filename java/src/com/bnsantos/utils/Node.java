@@ -23,5 +23,9 @@ public class Node {
 	public void setValue(int value) {
 		this.value = value;
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof Node && ((Node)obj).value==this.value;
+	}
 }
