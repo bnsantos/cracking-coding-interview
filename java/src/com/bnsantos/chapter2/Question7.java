@@ -1,11 +1,11 @@
 package com.bnsantos.chapter2;
 
-import com.bnsantos.utils.Node;
+import com.bnsantos.utils.ListNode;
 
 public class Question7 {
-	public static boolean palindrome(Node head){
-		Node reverted = revert(head);
-		Node pNormal=head,pReverted=reverted;
+	public static boolean palindrome(ListNode head){
+		ListNode reverted = revert(head);
+		ListNode pNormal=head,pReverted=reverted;
 		while(pNormal!=null&&pReverted!=null){
 			if(pNormal.getValue()!=pReverted.getValue()){
 				return false;
@@ -17,11 +17,11 @@ public class Question7 {
 	}
 	
 	
-	private static Node revert(Node head){
-		Node reverted = new Node(head.getValue());
-		Node current = head.getNext();
+	private static ListNode revert(ListNode head){
+		ListNode reverted = new ListNode(head.getValue());
+		ListNode current = head.getNext();
 		while(current!=null){
-			Node n = new Node(current.getValue());
+			ListNode n = new ListNode(current.getValue());
 			n.setNext(reverted);
 			reverted = n;
 			current = current.getNext();

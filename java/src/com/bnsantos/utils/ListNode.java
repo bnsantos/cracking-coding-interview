@@ -1,10 +1,10 @@
 package com.bnsantos.utils;
 
-public class Node {
+public class ListNode {
 	private int value;
-	private Node next;
+	private ListNode next;
 	
-	public Node(int value){
+	public ListNode(int value){
 		this.value = value;
 	}
 
@@ -12,11 +12,11 @@ public class Node {
 		return value;
 	}
 	
-	public void setNext(Node n){
+	public void setNext(ListNode n){
 		this.next = n;
 	}
 
-	public Node getNext() {
+	public ListNode getNext() {
 		return next;
 	}
 
@@ -26,6 +26,6 @@ public class Node {
 
 	@Override
 	public boolean equals(Object obj) {
-		return obj instanceof Node && ((Node)obj).value==this.value;
+		return obj instanceof ListNode && ((ListNode)obj).value==this.value;
 	}
 }

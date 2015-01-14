@@ -1,10 +1,10 @@
 package com.bnsantos.chapter2;
 
-import com.bnsantos.utils.Node;
+import com.bnsantos.utils.ListNode;
 
 public class Question6 {
-	public static Node loopBeginning(Node head){
-		Node slow = head, fast = head;
+	public static ListNode loopBeginning(ListNode head){
+		ListNode slow = head, fast = head;
 		
 		while(fast!=null&&fast.getNext()!=null){
 			slow = slow.getNext();

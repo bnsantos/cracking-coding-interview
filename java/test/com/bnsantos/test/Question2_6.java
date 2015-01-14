@@ -4,32 +4,32 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.bnsantos.chapter2.Question6;
-import com.bnsantos.utils.Node;
+import com.bnsantos.utils.ListNode;
 
 public class Question2_6 {
 
 	@Test
 	public void testLoop1() {
-		Node head = new Node(1);
-		Node node2 = new Node(2);
+		ListNode head = new ListNode(1);
+		ListNode node2 = new ListNode(2);
 		head.setNext(node2);
-		Node node3 = new Node(3);
+		ListNode node3 = new ListNode(3);
 		node2.setNext(node3);
-		Node node4 = new Node(4);
+		ListNode node4 = new ListNode(4);
 		node3.setNext(node4);
-		Node node5 = new Node(5);
+		ListNode node5 = new ListNode(5);
 		node4.setNext(node5);
-		Node beginning = new Node(6);
+		ListNode beginning = new ListNode(6);
 		node5.setNext(beginning);
-		Node node7 = new Node(7);
+		ListNode node7 = new ListNode(7);
 		beginning.setNext(node7);
-		Node node8 = new Node(8);
+		ListNode node8 = new ListNode(8);
 		node7.setNext(node8);
-		Node node9 = new Node(9);
+		ListNode node9 = new ListNode(9);
 		node8.setNext(node9);
-		Node node10 = new Node(10);
+		ListNode node10 = new ListNode(10);
 		node9.setNext(node10);
-		Node node11 = new Node(11);
+		ListNode node11 = new ListNode(11);
 		node10.setNext(node11);
 		node11.setNext(beginning);
 		
@@ -38,26 +38,26 @@ public class Question2_6 {
 	
 	@Test
 	public void testLoop2() {
-		Node head = new Node(1);
-		Node node2 = new Node(2);
+		ListNode head = new ListNode(1);
+		ListNode node2 = new ListNode(2);
 		head.setNext(node2);
-		Node node3 = new Node(3);
+		ListNode node3 = new ListNode(3);
 		node2.setNext(node3);
-		Node node4 = new Node(4);
+		ListNode node4 = new ListNode(4);
 		node3.setNext(node4);
-		Node node5 = new Node(5);
+		ListNode node5 = new ListNode(5);
 		node4.setNext(node5);
-		Node node6 = new Node(6);
+		ListNode node6 = new ListNode(6);
 		node5.setNext(node6);
-		Node node7 = new Node(7);
+		ListNode node7 = new ListNode(7);
 		node6.setNext(node7);
-		Node node8 = new Node(8);
+		ListNode node8 = new ListNode(8);
 		node7.setNext(node8);
-		Node node9 = new Node(9);
+		ListNode node9 = new ListNode(9);
 		node8.setNext(node9);
-		Node beginning = new Node(10);
+		ListNode beginning = new ListNode(10);
 		node9.setNext(beginning);
-		Node node11 = new Node(11);
+		ListNode node11 = new ListNode(11);
 		beginning.setNext(node11);
 		node11.setNext(beginning);
 		
@@ -66,26 +66,26 @@ public class Question2_6 {
 	
 	@Test
 	public void testNoLoop1() {
-		Node head = new Node(1);
-		Node node2 = new Node(2);
+		ListNode head = new ListNode(1);
+		ListNode node2 = new ListNode(2);
 		head.setNext(node2);
-		Node node3 = new Node(3);
+		ListNode node3 = new ListNode(3);
 		node2.setNext(node3);
-		Node node4 = new Node(4);
+		ListNode node4 = new ListNode(4);
 		node3.setNext(node4);
-		Node node5 = new Node(5);
+		ListNode node5 = new ListNode(5);
 		node4.setNext(node5);
-		Node node6 = new Node(6);
+		ListNode node6 = new ListNode(6);
 		node5.setNext(node6);
-		Node node7 = new Node(7);
+		ListNode node7 = new ListNode(7);
 		node6.setNext(node7);
-		Node node8 = new Node(8);
+		ListNode node8 = new ListNode(8);
 		node7.setNext(node8);
-		Node node9 = new Node(9);
+		ListNode node9 = new ListNode(9);
 		node8.setNext(node9);
-		Node node10 = new Node(10);
+		ListNode node10 = new ListNode(10);
 		node9.setNext(node10);
-		Node node11 = new Node(11);
+		ListNode node11 = new ListNode(11);
 		node10.setNext(node11);
 		
 		Assert.assertEquals(null, Question6.loopBeginning(head));
