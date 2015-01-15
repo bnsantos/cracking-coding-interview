@@ -5,29 +5,29 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.bnsantos.chapter4.Question1;
-import com.bnsantos.utils.BinaryNode;
+import com.bnsantos.utils.BinaryTreeNode;
 
 public class Question4_1 {
-	private BinaryNode mRoot;
-	private BinaryNode mNode8,mNode1;
+	private BinaryTreeNode mRoot;
+	private BinaryTreeNode mNode8,mNode1;
 	
 	@Before
 	public void init(){
-		mRoot = new BinaryNode("0");
-		BinaryNode n1 = new BinaryNode("1");
-		BinaryNode n2 = new BinaryNode("2");
-		BinaryNode n3 = new BinaryNode("3");
-		BinaryNode n4 = new BinaryNode("4");
-		BinaryNode n5 = new BinaryNode("5");
-		BinaryNode n6 = new BinaryNode("6");
-		BinaryNode n7 = new BinaryNode("7");
-		BinaryNode n8 = new BinaryNode("8");
-		BinaryNode n9 = new BinaryNode("9");
-		BinaryNode n10 = new BinaryNode("10");
-		BinaryNode n11 = new BinaryNode("11");
-		BinaryNode n12 = new BinaryNode("12");
-		BinaryNode n13 = new BinaryNode("13");
-		BinaryNode n14 = new BinaryNode("14");
+		mRoot = new BinaryTreeNode("0");
+		BinaryTreeNode n1 = new BinaryTreeNode("1");
+		BinaryTreeNode n2 = new BinaryTreeNode("2");
+		BinaryTreeNode n3 = new BinaryTreeNode("3");
+		BinaryTreeNode n4 = new BinaryTreeNode("4");
+		BinaryTreeNode n5 = new BinaryTreeNode("5");
+		BinaryTreeNode n6 = new BinaryTreeNode("6");
+		BinaryTreeNode n7 = new BinaryTreeNode("7");
+		BinaryTreeNode n8 = new BinaryTreeNode("8");
+		BinaryTreeNode n9 = new BinaryTreeNode("9");
+		BinaryTreeNode n10 = new BinaryTreeNode("10");
+		BinaryTreeNode n11 = new BinaryTreeNode("11");
+		BinaryTreeNode n12 = new BinaryTreeNode("12");
+		BinaryTreeNode n13 = new BinaryTreeNode("13");
+		BinaryTreeNode n14 = new BinaryTreeNode("14");
 		
 		mRoot.setLeft(n1);
 		mRoot.setRight(n8);

@@ -1,13 +1,13 @@
 package com.bnsantos.chapter4;
 
-import com.bnsantos.utils.BinaryNode;
+import com.bnsantos.utils.BinaryTreeNode;
 
 public class Question1 {
-	public static boolean isBalanced(BinaryNode root){
+	public static boolean isBalanced(BinaryTreeNode root){
 		return maxHeight(root)!=-1;
 	}
 	
-	private static int maxHeight(BinaryNode root){
+	private static int maxHeight(BinaryTreeNode root){
 		if(root==null){
 			return 0;
 		}
