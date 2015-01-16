@@ -41,4 +41,9 @@ public class BinaryTreeNode {
 		}
 		return inOrderTraversal(root.getLeft()) + " " + root.mValue + " " + inOrderTraversal(root.mRight);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof BinaryTreeNode && mValue == ((BinaryTreeNode)obj).mValue;
+	}
 }
