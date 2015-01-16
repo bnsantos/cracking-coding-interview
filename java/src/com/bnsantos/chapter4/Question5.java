@@ -16,5 +16,21 @@ public class Question5 {
 			return false;
 		}
 	}
+	
+	public static boolean isBST(BinaryTreeNode root, Integer min, Integer max){
+		if(root==null){
+			return true;
+		}
+
+		int value = Integer.parseInt(root.getValue());
+		if((min!=null&&value<=min)||(max!=null&&value>max)){
+			return false;
+		}
+		
+		if(!isBST(root.getLeft(), min, value) || !isBST(root.getRight(), value, max)){
+			return false;
+		}
+		return true;
+	}
 
 }
