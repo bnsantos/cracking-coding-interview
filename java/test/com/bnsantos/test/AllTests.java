@@ -3,6 +3,33 @@ package com.bnsantos.test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import com.bnsantos.test.questions.Question1_1;
+import com.bnsantos.test.questions.Question1_3;
+import com.bnsantos.test.questions.Question1_4;
+import com.bnsantos.test.questions.Question1_5;
+import com.bnsantos.test.questions.Question1_6;
+import com.bnsantos.test.questions.Question1_7;
+import com.bnsantos.test.questions.Question1_8;
+import com.bnsantos.test.questions.Question2_1;
+import com.bnsantos.test.questions.Question2_2;
+import com.bnsantos.test.questions.Question2_4;
+import com.bnsantos.test.questions.Question2_5;
+import com.bnsantos.test.questions.Question2_6;
+import com.bnsantos.test.questions.Question2_7;
+import com.bnsantos.test.questions.Question3_1;
+import com.bnsantos.test.questions.Question3_2;
+import com.bnsantos.test.questions.Question3_3;
+import com.bnsantos.test.questions.Question3_4;
+import com.bnsantos.test.questions.Question3_5;
+import com.bnsantos.test.questions.Question3_6;
+import com.bnsantos.test.questions.Question3_7;
+import com.bnsantos.test.questions.Question4_1;
+import com.bnsantos.test.questions.Question4_2;
+import com.bnsantos.test.questions.Question4_3;
+import com.bnsantos.test.questions.Question4_4;
+import com.bnsantos.test.questions.Question4_5;
+import com.bnsantos.test.questions.Question4_6;
+
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	Question1_1.class, Question1_3.class, Question1_4.class, Question1_5.class, Question1_6.class, Question1_7.class, Question1_8.class,

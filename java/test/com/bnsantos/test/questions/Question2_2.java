@@ -1,4 +1,4 @@
-package com.bnsantos.test;
+package com.bnsantos.test.questions;
 
 import java.util.Arrays;
 
