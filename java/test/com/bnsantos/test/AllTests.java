@@ -40,6 +40,7 @@ import com.bnsantos.test.questions.Question5_6;
 import com.bnsantos.test.questions.Question5_7;
 import com.bnsantos.test.questions.Question5_8;
 import com.bnsantos.test.questions.Question7_3;
+import com.bnsantos.test.questions.Question7_4;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -48,6 +49,6 @@ import com.bnsantos.test.questions.Question7_3;
 	Question3_1.class, Question3_2.class, Question3_3.class, Question3_4.class, Question3_5.class, Question3_6.class, Question3_7.class,
 	Question4_1.class, Question4_2.class, Question4_3.class, Question4_4.class, Question4_5.class, Question4_6.class, Question4_7.class, Question4_8.class, Question4_9.class,
 	Question5_1.class, Question5_2.class, Question5_3.class, Question5_5.class, Question5_6.class, Question5_7.class, Question5_8.class,
-	Question7_3.class
+	Question7_3.class, Question7_4.class
 	})
 public class AllTests{}
