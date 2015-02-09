@@ -7,11 +7,13 @@ public class CallCenter {
 	private final List<Employee> mRespondents;
 	private final List<Employee> mManager;
 	private final List<Employee> mDirectors;
+	private List<Thread> mPoolCalls;
 	
 	public CallCenter(int respondents, int managers, int directors){
 		mRespondents = initRespondents(respondents);
 		mManager = initManagers(managers);
 		mDirectors = initDirectors(directors);
+		mPoolCalls = new ArrayList<Thread>();
 	}
 	
 	public List<Employee> initRespondents(int max){
@@ -60,43 +62,53 @@ public class CallCenter {
 	}
 	
 	public void handleCall(Call call){
-		while(!call.isDone()){
-			Respondent respondent = (Respondent)getAvailableRespondent();
-			if(respondent!=null&&!call.alreadyTalked(respondent)){
-				call.addAttendant(respondent);
-				
-				wait(1000);
-				if(!call.isDone()){
-					respondent.transferCall();
-				}
-			}else{
-				Manager manager = (Manager) getAvailableManager();
-				if(manager!=null&&!call.alreadyTalked(manager)){
-					call.addAttendant(manager);
-					
-					wait(700);
-					if(!call.isDone()){
-						manager.transferCall();
-					}
-				}else{
-					Director director = (Director)getAvailableDirector();
-					if(director!=null){
-						call.addAttendant(director);
-						wait(500);
-					}	
-				}
+		Thread thread = new Thread(new CallRunnable(call));
+		thread.start();
+		mPoolCalls.add(thread);
+	}
+	
+	public void waitCalls(){
+		for(Thread t:mPoolCalls){
+			try {
+				t.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 	}
 	
-	private void wait(int milli){
-		try {
-			Thread.sleep(milli);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private class CallRunnable implements Runnable{
+		private final Call mCall;
+		
+		public CallRunnable(Call call) {
+			mCall = call;
+		}
+		
+		@Override
+		public void run() {
+			while(!mCall.isDone()){
+				mCall.transferCall();
+				
+				Respondent respondent = (Respondent)getAvailableRespondent();
+				if(respondent!=null&&!mCall.alreadyTalked(respondent)){
+					System.out.println("Caller ["+mCall.getCaller().getName()+"] is being attendant by Respondent");
+					mCall.addAttendant(respondent);
+				}else{
+					Manager manager = (Manager) getAvailableManager();
+					if(manager!=null&&!mCall.alreadyTalked(manager)){
+						System.out.println("Caller ["+mCall.getCaller().getName()+"] is being attendant by Manager");
+						mCall.addAttendant(manager);
+					}else{
+						Director director = (Director)getAvailableDirector();
+						if(director!=null){
+							System.out.println("Caller ["+mCall.getCaller().getName()+"] is being attendant by Director");
+							mCall.addAttendant(director);
+						}	
+					}
+				}
+			}
 		}
 	}
-
 }
 
